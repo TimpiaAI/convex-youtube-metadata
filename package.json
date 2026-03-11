@@ -1,0 +1,63 @@
+{
+  "name": "convex-youtube-metadata",
+  "version": "1.0.0",
+  "description": "Convex component for YouTube video metadata caching with built-in rate limiting, TTL, reservation system, and batch lookups",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "module": "./dist/client/index.js",
+  "types": "./dist/client/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/client/index.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./_generated/component.js": {
+      "types": "./dist/component/_generated/component.d.ts"
+    },
+    "./convex.config": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    },
+    "./convex.config.js": {
+      "types": "./dist/component/convex.config.d.ts",
+      "default": "./dist/component/convex.config.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:component",
+    "build:esm": "tsc -p tsconfig.build.json",
+    "build:component": "tsc -p tsconfig.component.json",
+    "dev": "npx convex dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "convex": "^1.24.0"
+  },
+  "devDependencies": {
+    "convex": "^1.32.0",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "convex",
+    "component",
+    "youtube",
+    "metadata",
+    "cache",
+    "rate-limit",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimpiaAI/convex-youtube-metadata.git"
+  },
+  "homepage": "https://github.com/TimpiaAI/convex-youtube-metadata#readme",
+  "bugs": {
+    "url": "https://github.com/TimpiaAI/convex-youtube-metadata/issues"
+  },
+  "author": "TimpiaAI"
+}
