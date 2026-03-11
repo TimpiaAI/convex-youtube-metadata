@@ -1,5 +1,5 @@
 {
-  "name": "convex-youtube-metadata",
+  "name": "convex-youtube-cache",
   "version": "1.0.0",
   "description": "Convex component for YouTube video metadata caching with built-in rate limiting, TTL, reservation system, and batch lookups",
   "type": "module",
