@@ -415,7 +415,20 @@ export class YouTubeMetadataCache {
 
     for (let attempt = 0; attempt < this.maxRetries; attempt++) {
       try {
+        if (!this.apiKey) {
+          throw new Error(
+            "YouTube API key not configured. Set the YOUTUBE_API_KEY environment variable in your Convex dashboard."
+          );
+        }
+
         const response = await fetch(url);
+
+        if (response.status === 400) {
+          const errorBody = await response.text();
+          throw new Error(
+            `YouTube API error: HTTP 400 — check that your YOUTUBE_API_KEY is valid. Details: ${errorBody}`
+          );
+        }
 
         if (response.status === 403 || response.status === 429) {
           // Quota exceeded or rate limited — don't retry

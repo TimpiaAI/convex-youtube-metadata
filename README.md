@@ -1,5 +1,6 @@
 # convex-youtube-metadata
 
+[![Convex Component](https://www.convex.dev/components/badge/convex-youtube-cache)](https://www.convex.dev/components/convex-youtube-cache)
 [![npm](https://img.shields.io/npm/v/convex-youtube-metadata)](https://www.npmjs.com/package/convex-youtube-metadata)
 [![license](https://img.shields.io/npm/l/convex-youtube-metadata)](https://github.com/TimpiaAI/convex-youtube-metadata/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0%2B-blue)](https://www.typescriptlang.org/)
